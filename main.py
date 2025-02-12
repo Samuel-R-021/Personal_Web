@@ -1,12 +1,12 @@
 import streamlit as st
 
 homepage = st.Page(
-    page='homepage.py',
+    page='sections/homepage.py',
     title='Home',
     default=True
 )
 projects = st.Page(
-    page = 'projects.py',
+    page = 'sections/projects.py',
     title = 'Projects'
 )
 
