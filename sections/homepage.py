@@ -39,3 +39,22 @@ LinkedIn: https://www.linkedin.com/in/samuel-antonio-rangel-sar021/
           
 Email: samuel.rangel.021@gmail.com
 ''')
+st.subheader('My Resume:',divider='red')
+
+language = st.radio('Language',['English','Spanish'], horizontal=True, label_visibility='collapsed')
+
+if language == 'Spanish':
+    with open('assets/Samuel Antonio Rangel- CV - Analista de Datos.pdf', "rb") as file:
+        btn = st.download_button(
+            label="Download Spanish CV",
+            data=file,
+            file_name="Samuel Antonio Rangel- CV - Analista de Datos.pdf",
+            )
+
+if language == 'English':
+    with open('assets/Samuel Antonio Rangel- CV - Data Analyst.pdf', 'rb') as file:
+        btn = st.download_button(
+            label="Download English CV",
+            data=file,
+            file_name="Samuel Antonio Rangel- CV - Data Analyst.pdf",
+        )
